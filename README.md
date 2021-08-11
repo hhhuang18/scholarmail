@@ -67,6 +67,10 @@ $ scholarmail --conf=./config.json --html=./
 
 An example of executable script
 ```console
+$ touch run.sh
+```
+
+```console
 #!/usr/bin/env bash 
 
 clear
