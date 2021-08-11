@@ -28,16 +28,26 @@ Edit the content like
     "server": "imap.gmail.com",  
     "port": 993,  
     "remove_mail": 1,  
-    "apply_filter": 1,  
     "proxy": 1,  
     "proxy_ip": "127.0.0.1",  
     "proxy_port": 7890,  
+    "apply_filter": 1,  
     "filter_list": [  
         "keyword1",  
         "keyword2"  
     ]  
 }  
 ```
+"email": your email address
+"passkey": the pass key of imap service, please refer to the doc of your email provider
+"server": imap server address
+"port": imap server port  
+"remove_mail": whether remove the emails after fetching  
+"proxy": set to 1 if proxy is needed or 0
+"proxy_ip": proxy IP address 
+"proxy_port": proxy port 
+"apply_filter": filtering out the emails with the keywords specificed below  
+"filter_list": the list of keywords
 
 Then run
 ```console
