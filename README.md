@@ -17,7 +17,7 @@ $ pip install scholarmail
 Make a configure file
 
 ```console
-$ pip touch config.json
+$ touch config.json
 ```
 
 Edit the content like
