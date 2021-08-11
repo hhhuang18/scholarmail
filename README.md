@@ -42,4 +42,5 @@ Then run
 ```console
 $ scholarmail --conf=./config.json --html=./
 ```
-![image](https://user-images.githubusercontent.com/26362152/129020421-df8acc9d-2906-480e-9bd0-c1be3fac24cf.png)
+<img width="604" alt="WX20210811-192519@2x" src="https://user-images.githubusercontent.com/26362152/129020961-759d3e64-cb8e-46ba-b788-1f0cafb94ae1.png">
+
