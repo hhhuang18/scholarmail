@@ -65,3 +65,11 @@ $ scholarmail --conf=./config.json --html=./
 ```
 <img width="604" alt="WX20210811-192519@2x" src="https://user-images.githubusercontent.com/26362152/129020961-759d3e64-cb8e-46ba-b788-1f0cafb94ae1.png">
 
+An example of executable script
+```console
+#!/usr/bin/env bash 
+
+clear
+cd `dirname $0`
+scholarmail --conf=./config.json --html=./html/
+```
