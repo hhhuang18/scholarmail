@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Generated Page</title>
+</head>
+
+<body>
+    <h1>Received {{ item_count }} papers :</h1>
+    {% for d in data %}
+    <hr>
+    <h2><b><a href={{ d['link'] }} target="_blank">[ {{loop.index}} ]</a> {{ d['title'] }}</b></h2>
+    <b>
+        <p style="color:#6D2077">{{ d['info'] }}</p>
+    </b>
+    <p>{{ d['abstract'] }}</p>
+    <p><b>{{ d['source_count'] }} source : </b> <br>{{ d['source'] }}</p>
+    {% endfor %}
+
+    <hr>
+    <h2>Sources count:</h2>
+    {% for key in source_count %}
+    <p>{{ key }} : <b>{{ source_count[key] }}</b></p>
+    {% endfor %}
+
+</body>
+
+</html>

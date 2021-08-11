@@ -1,0 +1,21 @@
+{
+    "email": "h976567853@gmail.com",
+    "passkey": "vmsyvhtduxoqhenv",
+    "server": "imap.gmail.com",
+    "port": 993,
+    "remove_mail": 0,
+    "apply_filter": 1,
+    "proxy": 1,
+    "proxy_ip": "127.0.0.1",
+    "proxy_port": 7890,
+    "filter_list": [
+        "Kerr",
+        "Soliton",
+        "Solitons",
+        "comb",
+        "combs",
+        "Quantum",
+        "Federated",
+        "Video"
+    ]
+}

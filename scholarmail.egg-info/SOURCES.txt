@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+scholarmail/__init__.py
+scholarmail/gen_html.py
+scholarmail/get_email.py
+scholarmail/scholarmail.py
+scholarmail/temperate.html
+scholarmail.egg-info/PKG-INFO
+scholarmail.egg-info/SOURCES.txt
+scholarmail.egg-info/dependency_links.txt
+scholarmail.egg-info/entry_points.txt
+scholarmail.egg-info/requires.txt
+scholarmail.egg-info/top_level.txt

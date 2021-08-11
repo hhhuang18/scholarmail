@@ -1,0 +1,3 @@
+[console_scripts]
+scholarmail = scholarmail.scholarmail:main
+
