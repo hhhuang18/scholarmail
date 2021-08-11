@@ -5,7 +5,7 @@ A tool for converting Google Scholar alerting emails to html page.
 The Google Scholar provide a convenient alerting service that can push the latest scholar publication to your email. However, you would need to open each email to watch. This tool can fetch all received scholar emails and automatically generate a web page for you.  
 
 ![Artboard](https://user-images.githubusercontent.com/26362152/129020199-7efcf5d2-b8d8-4c17-bfee-25d23d95c5d7.png)
-
+  
 ## Setup
 
 **scholarmail** is available on PyPI:
