@@ -67,7 +67,7 @@ $ scholarmail --conf=./config.json --html=./
 
 An example of executable script
 ```console
-$ touch run.sh
+$ touch run.sh 
 ```
 
 ```console
