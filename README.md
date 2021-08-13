@@ -32,6 +32,7 @@ Edit the content like
     "proxy_ip": "127.0.0.1",  
     "proxy_port": 7890,  
     "apply_filter": 1,  
+    "translate": 1,  
     "filter_list": [  
         "keyword1",  
         "keyword2"  
@@ -55,6 +56,8 @@ Edit the content like
 "proxy_port":     proxy port 
 
 "apply_filter":   filtering out the emails with the keywords specificed below  
+
+"translate":      translate the title and abstract to Chinese
 
 "filter_list":    the list of keywords
 
