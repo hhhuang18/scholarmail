@@ -4,6 +4,25 @@ import pandas as pd
 from jinja2 import Environment, FileSystemLoader
 import os
 import json
+import goslate
+import concurrent.futures
+import goslate
+import socket
+import socks
+
+
+def get_translate(str_in, lang='zh-cn', max_workers=120):
+    print('translating')
+    socks.set_default_proxy(proxy_type=None, addr=None,port=None)
+    socket.socket = socks.socksocket
+    executor = concurrent.futures.ThreadPoolExecutor(max_workers=max_workers)
+    gs = goslate.Goslate(executor=executor, service_urls=[
+                         'https://translate.google.cn'])
+    tr = gs.translate(str_in, target_language=lang)
+    str_out = []
+    for idx, k in enumerate(tr):
+        str_out.append(str_in[idx]+'<br>'+k)
+    return str_out
 
 
 def concat_func(x):
@@ -31,6 +50,11 @@ def gen_html(file_name, path_conf, path_html, df):
     item_count = len(result)
     title_count = df['title'].value_counts().to_dict()
     source_count = df['source'].value_counts().to_dict()
+
+    if conf['translate']:
+        result['title'] = get_translate(result['title'].tolist())
+        result['abstract'] = get_translate(result['abstract'].tolist())
+
     data = [k for k in result.T.to_dict().values()]
 
     loader = FileSystemLoader(os.path.dirname(os.path.abspath(__file__)))
