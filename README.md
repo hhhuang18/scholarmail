@@ -32,7 +32,7 @@ Edit the content like
     "proxy_ip": "127.0.0.1",  
     "proxy_port": 7890,  
     "apply_filter": 1,  
-    "translate": 1,  
+    "translate": 0,  
     "filter_list": [  
         "keyword1",  
         "keyword2"  
