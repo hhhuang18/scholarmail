@@ -2,7 +2,10 @@
 
 A tool for converting Google Scholar alerting emails to html page.
 
-**[Update]: Now you can highlight keywords in the generated page! Modifications are needed in the configure file. (See below)**
+**[Update]: Now you can highlight keywords in the generated page!**
+
+**Modifications are needed in the configure file. (See below)**
+
 <img src="https://user-images.githubusercontent.com/26362152/142718980-d47e1305-a88f-4071-8c46-fe54138a8670.png" width="50%">
 
 The Google Scholar provide a convenient alerting service that can push the latest scholar publication to your email. However, you would need to open each email to watch. This tool can fetch all received scholar emails and automatically generate a web page for you.  
