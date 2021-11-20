@@ -18,7 +18,7 @@ URL = 'https://github.com/hhhuang18/myproject'
 EMAIL = 'h976567853@gmail.com'
 AUTHOR = 'Hh Huang'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '1.0.1'
+VERSION = '1.1.0'
 LICENSE = 'MIT'
 # What packages are required for this module to be executed?
 REQUIRED = [

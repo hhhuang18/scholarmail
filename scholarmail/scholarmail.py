@@ -16,7 +16,7 @@ def main():
     # path = os.path.abspath(os.path.dirname(__file__))
 
     name_csv, df = get_email.get_email(args.conf)
-    if not df.empty:
+    if len(df):
         gen_html.gen_html(name_csv, args.conf, args.html, df)
         web_addr = 'file://' + \
             os.path.abspath(os.path.join(args.html, name_csv + '.html'))

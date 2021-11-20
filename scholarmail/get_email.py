@@ -10,6 +10,18 @@ import time
 import os
 import json
 from tqdm import tqdm
+import re
+
+
+def add_highlight(input_str, find_str_list):
+    temp = input_str
+    for fs in find_str_list:
+        high_index = [(substr.start(),substr.end()) for substr in re.finditer(fs,input_str,re.IGNORECASE)]
+        bias_len = len('<mark>' + '</mark>')
+        for c, h in enumerate(high_index):
+            b = c*bias_len
+            temp = temp[:h[0]+b] + '<mark>' + temp[h[0]+b:h[1]+b] + '</mark>' + temp[h[1]+b:]
+    return temp
 
 
 def is_in_filter_list(string, filter_list=['Kerr']):
@@ -77,6 +89,11 @@ def get_email(path_conf):
                         'abstract': info[2*n+1],
                         'source': mail_source,
                         'filtered': is_in_filter_list(title[n], filter_list=conf['filter_list'])}
+
+                    if conf['apply_highlight']:
+                        dic['title'] = add_highlight(dic['title'], conf['highlight_list'])
+                        dic['abstract'] = add_highlight(dic['abstract'], conf['highlight_list'])
+
                     df = df.append(dic, ignore_index=True)
                 except:
                     tqdm.write('>>> error: '+title[n])
@@ -99,7 +116,7 @@ def get_email(path_conf):
         
         return file_name, df
     else:
-        return file_name, False
+        return file_name, df
 
     
 
